@@ -1,5 +1,9 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+
+
 
 class BasePage:
     def __init__(self, driver):
@@ -17,3 +21,10 @@ class BasePage:
         element = self.find_element(by, value)
         element.clear()
         element.send_keys(text)
+
+    def select_option(self, by, value: str, option: str):
+        element = self.find_element(by, value)
+        select = Select(element)
+        select.select_by_visible_text(option)
+
+    
