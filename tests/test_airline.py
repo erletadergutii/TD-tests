@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from pages.airline_page import AirlinePage  # Import AirlinePage class
+from pages.airline_page import AirlinePage 
 import time
 
 @pytest.fixture
@@ -32,7 +32,7 @@ class TestAirline:
         time.sleep(2)
 
         # Step 4: Fill in airline details
-        airline_page.submit(iatcode="EOE", airline_name="Test Airline21")
+        airline_page.submit(iatcode="EER", airline_name="Test Airline211")
 
         # Step 5: Validate the page after submitting
         assert "Airline List" in airline_page.get_headline()

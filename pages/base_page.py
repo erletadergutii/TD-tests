@@ -28,3 +28,9 @@ class BasePage:
         select.select_by_visible_text(option)
 
     
+    def login(self):
+        self.enter_text(By.XPATH, '//*[@id=":R6cm:-form-item"]', USERNAME)
+        self.enter_text(By.XPATH, '//*[@id=":Racm:-form-item"]', PASSWORD)
+        self.click(By.XPATH, '//*[@id="__next"]/main/div[1]/div/form/button')
+
+    

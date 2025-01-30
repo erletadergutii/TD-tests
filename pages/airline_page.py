@@ -1,10 +1,8 @@
-from pages.base_page import BasePage
+from pages.login_page import LoginPage
 from selenium.webdriver.common.by import By
 
-class AirlinePage(BasePage):
-    USERNAME_INPUT = (By.XPATH, '//*[@id=":R6cm:-form-item"]')
-    PASSWORD_INPUT = (By.XPATH, '//*[@id=":Racm:-form-item"]')
-    LOGIN_BUTTON = (By.XPATH, '//*[@id="__next"]/main/div[1]/div/form/button')
+class AirlinePage(LoginPage):
+    
     HEADLINE_TEXT = (By.TAG_NAME, "h1")
     AIRLINE = (By.XPATH, "//*[@id='__next']/nav/div[1]/div/div[2]/div/a[2]")
     ADD_AIRLINE_BUTTON = (By.XPATH, '//*[@id="__next"]/main/div[1]/div/div[1]/a')
@@ -12,20 +10,6 @@ class AirlinePage(BasePage):
     AIRLINE_NAME_INPUT = (By.CSS_SELECTOR, "input[name='name']")
     SUBMIT_BUTTON = (By.XPATH, '//*[@id="__next"]/main/div[1]/form/button')
 
-    def enter_username(self, username: str):
-        self.enter_text(*self.USERNAME_INPUT, username)
-
-    def enter_password(self, password: str):
-        self.enter_text(*self.PASSWORD_INPUT, password)
-
-    def click_login_button(self):
-        self.click(*self.LOGIN_BUTTON)
-
-
-    def login(self, username: str, password: str):
-        self.enter_username(username)
-        self.enter_password(password)
-        self.click_login_button()
 
     def click_airline_text(self):
         self.click(*self.AIRLINE)
