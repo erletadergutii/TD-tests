@@ -24,15 +24,15 @@ class TestAirline:
         # Step 2: Click on "Airline" in the navbar
         airline_page.click_airline_text()
 
-        time.sleep(5)
+        time.sleep(3)
 
         # Step 3: Click on "Add Airline" button
         airline_page.click_add_airline_button()
 
-        time.sleep(10)
+        time.sleep(2)
 
         # Step 4: Fill in airline details
-        airline_page.submit(iatcode="ABC", airline_name="Test Airline")
+        airline_page.submit(iatcode="EOE", airline_name="Test Airline21")
 
         # Step 5: Validate the page after submitting
-        assert "Success" in airline_page.get_headline() or "Airline Added" in airline_page.get_headline()
+        assert "Airline List" in airline_page.get_headline()

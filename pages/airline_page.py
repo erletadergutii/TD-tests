@@ -8,8 +8,8 @@ class AirlinePage(BasePage):
     HEADLINE_TEXT = (By.TAG_NAME, "h1")
     AIRLINE = (By.XPATH, "//*[@id='__next']/nav/div[1]/div/div[2]/div/a[2]")
     ADD_AIRLINE_BUTTON = (By.XPATH, '//*[@id="__next"]/main/div[1]/div/div[1]/a')
-    IATA_CODE_INPUT = (By.XPATH, "//*[@id=':rb:-form-item']")
-    AIRLINE_NAME_INPUT = (By.XPATH, "//*[@id=':rc:-form-item']")
+    IATA_CODE_INPUT = (By.CSS_SELECTOR, "input[name='IATA_code']")
+    AIRLINE_NAME_INPUT = (By.CSS_SELECTOR, "input[name='name']")
     SUBMIT_BUTTON = (By.XPATH, '//*[@id="__next"]/main/div[1]/form/button')
 
     def enter_username(self, username: str):
