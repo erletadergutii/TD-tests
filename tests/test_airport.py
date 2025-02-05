@@ -34,4 +34,4 @@ class TestAirport:
         airport_page.submit(code="ERL", airport_name="ERLETA", airport_city="ERLETA", airport_country="ERLETA")
 
         # Step 5: Validate the page after submitting
-        assert "Airport List" in airport_page.get_headline()
+        assert "Airports List" in airport_page.get_headline()
