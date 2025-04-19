@@ -19,7 +19,7 @@ properties = [
         "property_location": "Malibu, California",
         "property_price": "350",
         "property_guests": "4",
-        "dropdown_option": "Apartment"
+        "dropdown_option": "Other"
     },
     {
         "property_name": "Cozy Hostel Downtown",
@@ -59,7 +59,7 @@ properties = [
         "property_location": "Paris, France",
         "property_price": "280",
         "property_guests": "2",
-        "dropdown_option": "Apartment"
+        "dropdown_option": "Other"
     },
     {
         "property_name": "Historic Castle Stay",

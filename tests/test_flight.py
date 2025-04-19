@@ -36,7 +36,7 @@ class TestAirline:
         time.sleep(2)
 
         # Step 4: Fill in airline details
-        flight_page.submit(flight_number="FL123", departure_airport=1, arrival_airport=0, departure_time="", arrival_time="", airline="Test Airline", duration="120", price="299.99")
+        flight_page.submit(flight_number="FL1123", departure_airport=2, arrival_airport=4, departure_days_ahead=5, arrival_days_ahead=6, airline="Test Airline", duration="120", price="299.99")
 
         # Step 5: Validate the page after submitting
-        assert "Flights List" in flight_page.get_headline()
+        assert "Flight List" in flight_page.get_headline()
